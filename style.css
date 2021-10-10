@@ -1,0 +1,579 @@
+:root {
+  --color1: rgb(0, 231, 255);
+  --color2: rgb(255, 0, 231);
+  --back: black;
+  --fool1: #fac;
+  --fool2: #ddccaa;
+  --foolfront: url(../Miracle-22/img/tarot0.jpg);
+  --magician1: #fcb418;
+  --magician2: #ff8fe7;
+  --magicianfront: url(../Miracle-22/img/tarot1.jpg);
+  --priestess1: #efb2fb;
+  --priestess2: #acc6f8;
+  --priestessfront: url(../Miracle-22/img/tarot2.jpg);
+  --empress1: #5fe7a7;
+  --empress2: #acc6f8;
+  --empressfront: url(../Miracle-22/img/tarot3.jpg);
+  --emperor1: #efb2fb;
+  --emperor2: #acc6f8;
+  --emperorfront: url(../Miracle-22/img/tarot4.jpg);
+  --hierophant1: #efb2fb;
+  --hierophant2: #acc6f8;
+  --hierophantfront: url(../Miracle-22/img/tarot5.jpg);
+  --lovers1: #fac;
+  --lovers2: #ddccaa;
+  --loversfront: url(../Miracle-22/img/tarot6.jpg);
+  --chariot1: #fffda3;
+  --chariot2: #9fff92;
+  --chariotfront: url(../Miracle-22/img/tarot7.jpg);
+  --strength1: #efb2fb;
+  --strength2: #acc6f8;
+  --strengthfront: url(../Miracle-22/img/tarot8.jpg);
+  --hermit1: #5fe7a7;
+  --hermit2: #acc6f8;
+  --hermitfront: url(../Miracle-22/img/tarot9.jpg);
+  --fortune1: #b9d4fd;
+  --fortune2: #f8c1fd;
+  --fortunefront: url(../Miracle-22/img/tarot10.jpg);
+  --justice1: #efb2fb;
+  --justice2: #acc6f8;
+  --justicefront: url(../Miracle-22/img/tarot11.jpg);
+  --hanged1: rgb(170, 183, 255);
+  --hanged2: #ddccaa;
+  --hangedfront: url(../Miracle-22/img/tarot12.jpg);
+  --death1: #ffefcd;
+  --death2: #ffb9f0;
+  --deathfront: url(../Miracle-22/img/tarot13.jpg);
+  --temperance1: #bdb2fb;
+  --temperance2: #acc6f8;
+  --temperancefront: url(../Miracle-22/img/tarot14.jpg);
+  --devil1: #df8888;
+  --devil2: #da8ff1;
+  --devilfront: url(../Miracle-22/img/tarot15.jpg);
+  --tower1: #f3c78e;
+  --tower2: #acc6f8;
+  --towerfront: url(../Miracle-22/img/tarot16.jpg);
+  --star1: #efb2fb;
+  --star2: #acc6f8;
+  --starfront: url(../Miracle-22/img/tarot17.jpg);
+  --moon1: #fac;
+  --moon2: #ddccaa;
+  --moonfront: url(../Miracle-22/img/tarot18.jpg);
+  --sun1: #f3d593;
+  --sun2: #fad4f2;
+  --sunfront: url(../Miracle-22/img/tarot19.jpg);
+  --judgment1: #efb2fb;
+  --judgment2: #acc6f8;
+  --judgmentfront: url(../Miracle-22/img/tarot20.jpg);
+  --world1: #5fe7a7;
+  --world2: #acc6f8;
+  --worldfront: url(../Miracle-22/img/tarot21.jpg);
+
+}
+
+.card {
+  margin: 20px;
+  z-index: 10;
+  touch-action: none;
+  border-radius: 1%/0.5%;
+  box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  background-color: #040712;
+  background-image: var(--front);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform-origin: center;
+  
+}
+@media screen and (min-width: 600px) {
+  .card {
+    width: clamp(10vw, 47.8vh, 14.2vw);
+    height: clamp(18vw, 85vh, 25.2vw);
+  }
+}
+
+.card:hover {
+  box-shadow: -20px -20px 30px -25px var(--color1), 20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1), 7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+}
+
+.card.fool {
+  --color1: var(--fool1);
+  --color2: var(--fool2);
+  --front: var(--foolfront);
+}
+
+.card.magician {
+  --color1: var(--magician1);
+  --color2: var(--magician2);
+  --front: var(--magicianfront);
+}
+
+.card.priestess {
+  --color1: var(--priestess1);
+  --color2: var(--priestess2);
+  --front: var(--priestessfront);
+}
+
+.card.empress {
+  --color1: var(--empress1);
+  --color2: var(--empress2);
+  --front: var(--empressfront);
+}
+
+.card.emperor {
+  --color1: var(--emperor1);
+  --color2: var(--emperor2);
+  --front: var(--emperorfront);
+}
+
+.card.hierophant {
+  --color1: var(--hierophant1);
+  --color2: var(--hierophant2);
+  --front: var(--hierophantfront);
+}
+
+.card.lovers {
+  --color1: var(--lovers1);
+  --color2: var(--lovers2);
+  --front: var(--loversfront);
+}
+
+.card.chariot {
+  --color1: var(--chariot1);
+  --color2: var(--chariot2);
+  --front: var(--chariotfront);
+}
+
+.card.strength {
+  --color1: var(--strength1);
+  --color2: var(--strength2);
+  --front: var(--strengthfront);
+}
+
+.card.hermit {
+  --color1: var(--hermit1);
+  --color2: var(--hermit2);
+  --front: var(--hermitfront);
+}
+
+.card.fortune {
+  --color1: var(--fortune1);
+  --color2: var(--fortune2);
+  --front: var(--fortunefront);
+}
+
+.card.justice {
+  --color1: var(--justice1);
+  --color2: var(--justice2);
+  --front: var(--justicefront);
+}
+
+.card.hanged {
+  --color1: var(--hanged1);
+  --color2: var(--hanged2);
+  --front: var(--hangedfront);
+}
+
+.card.death {
+  --color1: var(--death1);
+  --color2: var(--death2);
+  --front: var(--deathfront);
+}
+
+.card.temperance {
+  --color1: var(--temperance1);
+  --color2: var(--temperance2);
+  --front: var(--temperancefront);
+}
+
+.card.devil {
+  --color1: var(--devil1);
+  --color2: var(--devil2);
+  --front: var(--devilfront);
+}
+
+.card.tower {
+  --color1: var(--tower1);
+  --color2: var(--tower2);
+  --front: var(--towerfront);
+}
+
+.card.star {
+  --color1: var(--star1);
+  --color2: var(--star2);
+  --front: var(--starfront);
+}
+
+.card.moon {
+  --color1: var(--moon1);
+  --color2: var(--moon2);
+  --front: var(--moonfront);
+}
+
+.card.sun {
+  --color1: var(--sun1);
+  --color2: var(--sun2);
+  --front: var(--sunfront);
+}
+
+.card.judgment {
+  --color1: var(--judgment1);
+  --color2: var(--judgment2);
+  --front: var(--judgmentfront);
+}
+
+.card.world {
+  --color1: var(--world1);
+  --color2: var(--world2);
+  --front: var(--worldfront);
+}
+
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+  transition: all 0.33s ease;
+}
+
+.card:before {
+  background-position: 50% 50%;
+  background-size: 300% 300%;
+  background-image: linear-gradient(115deg, transparent 0%, var(--color1) 25%, transparent 47%, transparent 53%, var(--color2) 75%, transparent 100%);
+  opacity: 0.5;
+  filter: brightness(0.5) contrast(1);
+  z-index: 1;
+}
+
+.card:after {
+  opacity: 1;
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif"), url(https://assets.codepen.io/13471/holo.png), linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%);
+  background-position: 50% 50%;
+  background-size: 160%;
+  background-blend-mode: overlay;
+  z-index: 2;
+  filter: brightness(1) contrast(1);
+  transition: all 0.33s ease;
+  mix-blend-mode: color-dodge;
+  opacity: 0.75;
+}
+
+.card.active:after,
+.card:hover:after {
+  filter: brightness(1) contrast(1);
+  opacity: 1;
+}
+
+.card.active,
+.card:hover {
+  -webkit-animation: none;
+          animation: none;
+  transition: box-shadow 0.1s ease-out;
+}
+
+.card.active:before,
+.card:hover:before {
+  -webkit-animation: none;
+          animation: none;
+  background-image: linear-gradient(110deg, transparent 25%, var(--color1) 48%, var(--color2) 52%, transparent 75%);
+  background-position: 50% 50%;
+  background-size: 250% 250%;
+  opacity: 0.88;
+  filter: brightness(0.66) contrast(1.33);
+  transition: none;
+}
+
+.card.active:before,
+.card:hover:before,
+.card.active:after,
+.card:hover:after {
+  -webkit-animation: none;
+          animation: none;
+  transition: none;
+}
+
+.card.animated {
+  transition: none;
+  -webkit-animation: holoCard 12s ease 0s 1;
+          animation: holoCard 12s ease 0s 1;
+}
+.card.animated:before {
+  transition: none;
+  -webkit-animation: holoGradient 12s ease 0s 1;
+          animation: holoGradient 12s ease 0s 1;
+}
+.card.animated:after {
+  transition: none;
+  -webkit-animation: holoSparkle 12s ease 0s 1;
+          animation: holoSparkle 12s ease 0s 1;
+}
+
+@-webkit-keyframes holoSparkle {
+  0%, 100% {
+    opacity: 0.75;
+    background-position: 50% 50%;
+    filter: brightness(1.2) contrast(1.25);
+  }
+  5%, 8% {
+    opacity: 1;
+    background-position: 40% 40%;
+    filter: brightness(0.8) contrast(1.2);
+  }
+  13%, 16% {
+    opacity: 0.5;
+    background-position: 50% 50%;
+    filter: brightness(1.2) contrast(0.8);
+  }
+  35%, 38% {
+    opacity: 1;
+    background-position: 60% 60%;
+    filter: brightness(1) contrast(1);
+  }
+  55% {
+    opacity: 0.33;
+    background-position: 45% 45%;
+    filter: brightness(1.2) contrast(1.25);
+  }
+}
+
+@keyframes holoSparkle {
+  0%, 100% {
+    opacity: 0.75;
+    background-position: 50% 50%;
+    filter: brightness(1.2) contrast(1.25);
+  }
+  5%, 8% {
+    opacity: 1;
+    background-position: 40% 40%;
+    filter: brightness(0.8) contrast(1.2);
+  }
+  13%, 16% {
+    opacity: 0.5;
+    background-position: 50% 50%;
+    filter: brightness(1.2) contrast(0.8);
+  }
+  35%, 38% {
+    opacity: 1;
+    background-position: 60% 60%;
+    filter: brightness(1) contrast(1);
+  }
+  55% {
+    opacity: 0.33;
+    background-position: 45% 45%;
+    filter: brightness(1.2) contrast(1.25);
+  }
+}
+@-webkit-keyframes holoGradient {
+  0%, 100% {
+    opacity: 0.5;
+    background-position: 50% 50%;
+    filter: brightness(0.5) contrast(1);
+  }
+  5%, 9% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(0.75) contrast(1.25);
+  }
+  13%, 17% {
+    background-position: 0% 0%;
+    opacity: 0.88;
+  }
+  35%, 39% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(0.5) contrast(1);
+  }
+  55% {
+    background-position: 0% 0%;
+    opacity: 1;
+    filter: brightness(0.75) contrast(1.25);
+  }
+}
+@keyframes holoGradient {
+  0%, 100% {
+    opacity: 0.5;
+    background-position: 50% 50%;
+    filter: brightness(0.5) contrast(1);
+  }
+  5%, 9% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(0.75) contrast(1.25);
+  }
+  13%, 17% {
+    background-position: 0% 0%;
+    opacity: 0.88;
+  }
+  35%, 39% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(0.5) contrast(1);
+  }
+  55% {
+    background-position: 0% 0%;
+    opacity: 1;
+    filter: brightness(0.75) contrast(1.25);
+  }
+}
+@-webkit-keyframes holoCard {
+  0%, 100% {
+    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+  }
+  5%, 8% {
+    transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
+  }
+  13%, 16% {
+    transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
+  }
+  35%, 38% {
+    transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
+  }
+  55% {
+    transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
+  }
+}
+@keyframes holoCard {
+  0%, 100% {
+    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+  }
+  5%, 8% {
+    transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
+  }
+  13%, 16% {
+    transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
+  }
+  35%, 38% {
+    transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
+  }
+  55% {
+    transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
+  }
+}
+
+
+.demo .card {
+  background-image: var(--back);
+  font-size: 2vh;
+}
+
+.demo .card > span {
+  position: relative;
+  top: 45%;
+}
+
+.demo .card:nth-of-type(1),
+.demo .card:nth-of-type(2),
+.demo .card:nth-of-type(3) {
+  width: 20vh;
+  height: 27.5vh;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4), 0 25px 15px -10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: none;
+          animation: none;
+}
+
+.demo .card:nth-of-type(1):before, .demo .card:nth-of-type(1):after,
+.demo .card:nth-of-type(2):before,
+.demo .card:nth-of-type(2):after,
+.demo .card:nth-of-type(3):before,
+.demo .card:nth-of-type(3):after {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.demo .card:nth-of-type(1):before, .demo .card:nth-of-type(1):after {
+  display: none;
+}
+
+.demo .card:nth-of-type(2) {
+  background: none;
+}
+.demo .card:nth-of-type(2):before {
+  display: none;
+}
+
+.demo .card:nth-of-type(3) {
+  background: none;
+}
+.demo .card:nth-of-type(3):after {
+  display: none;
+}
+
+.operator {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 6vh;
+}
+
+html, body {
+  height: 100%;
+  background-color: #333844;
+  padding: 0;
+  z-index: 1;
+  transform: translate3d(0, 0, 0.1px);
+}
+
+body {
+  color: white;
+  background-color: #333844;
+  font-family: "Heebo", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  display: block;
+  margin: 30px 0;
+}
+
+p {
+  margin-top: 5px;
+  font-weight: 200;
+}
+
+#app {
+  position: relative;
+}
+
+.demo,
+.cards {
+  margin-top: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  perspective: 2000px;
+  position: relative;
+  z-index: 1;
+  transform: translate3d(0.1px, 0.1px, 0.1px);
+}
+
+.demo {
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+  }
+}
+.cards .card:nth-child(2), .cards .card:nth-child(2):before, .cards .card:nth-child(2):after {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.cards .card:nth-child(3), .cards .card:nth-child(3):before, .cards .card:nth-child(3):after {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.cards .card:nth-child(4), .cards .card:nth-child(4):before, .cards .card:nth-child(4):after {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
