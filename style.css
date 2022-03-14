@@ -83,8 +83,7 @@
   background-image: var(--front);
   background-size: contain;
   background-repeat: no-repeat;
-  transform-origin: center;
-  
+  transform-origin: center;  
 }
 @media screen and (min-width: 600px) {
   .card {
@@ -457,52 +456,26 @@
   }
 }
 
-
-.demo .card {
-  background-image: var(--back);
-  font-size: 2vh;
+.card .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  font-family: "Kyokasho";
+  font-size: 0.9rem;
+  outline: 1px solid white;
+  outline-offset: -10px;
 }
 
-.demo .card > span {
-  position: relative;
-  top: 45%;
+.overlay p{
+  text-align: left;
+  margin: 1.2rem;
+  font-size: 0.7rem;
 }
 
-.demo .card:nth-of-type(1),
-.demo .card:nth-of-type(2),
-.demo .card:nth-of-type(3) {
-  width: 20vh;
-  height: 27.5vh;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4), 0 25px 15px -10px rgba(0, 0, 0, 0.5);
-  -webkit-animation: none;
-          animation: none;
-}
-
-.demo .card:nth-of-type(1):before, .demo .card:nth-of-type(1):after,
-.demo .card:nth-of-type(2):before,
-.demo .card:nth-of-type(2):after,
-.demo .card:nth-of-type(3):before,
-.demo .card:nth-of-type(3):after {
-  -webkit-animation: none;
-          animation: none;
-}
-
-.demo .card:nth-of-type(1):before, .demo .card:nth-of-type(1):after {
-  display: none;
-}
-
-.demo .card:nth-of-type(2) {
-  background: none;
-}
-.demo .card:nth-of-type(2):before {
-  display: none;
-}
-
-.demo .card:nth-of-type(3) {
-  background: none;
-}
-.demo .card:nth-of-type(3):after {
-  display: none;
+.card:hover .overlay{
+  opacity: 1;
 }
 
 .operator {
@@ -524,6 +497,11 @@ body {
   background-color: #333844;
   font-family: "Heebo", sans-serif;
   text-align: center;
+}
+
+@font-face {
+  font-family: "Kyokasho";
+  src: url("UDDigiKyokashoN-R.ttc");
 }
 
 h1 {
