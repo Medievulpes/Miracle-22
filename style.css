@@ -74,6 +74,8 @@
 .card {
   margin: 20px;
   z-index: 10;
+  width: fit-content;
+  height: fit-content;
   touch-action: none;
   border-radius: 1%/0.5%;
   box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
